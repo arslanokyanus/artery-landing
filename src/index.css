@@ -4,7 +4,13 @@
 :root{ --glass: rgba(255,255,255,.7); --ring: rgba(41,78,155,.45); }
 *{scroll-behavior:smooth}
 .focus-ring{ outline:none; box-shadow: 0 0 0 2px var(--ring), 0 0 0 4px white; }
-.container-xxl{ margin-inline:auto; max-width:80rem; padding-inline:1rem; }
+.container-xxl{
+  margin-inline:auto;
+  width:100%;
+  max-width:clamp(82rem, 94vw, 110rem);  /* 1312px–1760px arası açılır */
+  padding-inline:clamp(16px, 3.5vw, 56px);
+}
+
 .shadow-soft{ box-shadow:0 10px 30px rgba(15,23,42,.08) }
 .card{ border:1px solid rgb(226 232 240); border-radius:1rem; background:#fff }
 .badge{ display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:999px; font-size:.75rem; background:rgb(241 245 249) }
